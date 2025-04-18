@@ -7,15 +7,15 @@ export const DeepLinking = () => {
   const params = new URLSearchParams(window.location.search);
 
   const appDeeplink = params.get("urlRedirect");
+  const identifierAppStore = params.get("identifierAppStore");
+  const identifierPlayStore = params.get("identifierPlayStore");
 
   useEffect(() => {
     const userAgent =
       navigator.userAgent || navigator.vendor || (window as any).opera;
 
-    const iosAppStoreLink = "https://apps.apple.com/app/idSEU_ID_AQUI";
-    const androidPlayStoreLink =
-      "https://play.google.com/store/apps/details?id=com.meetpoint";
-
+    const iosAppStoreLink = `https://apps.apple.com/app/${identifierAppStore}`;
+    const androidPlayStoreLink = `https://play.google.com/store/apps/details?id=${identifierPlayStore}`;
     const fallback = () => {
       if (/android/i.test(userAgent)) {
         window.location.href = androidPlayStoreLink;
