@@ -1,15 +1,15 @@
 # NeosDev - Challenge
 
-Essa aplicação é para um desafio NeosDev, contendo duas aplicações no total, frontend e backend.
+Essa aplicação tem como objetivo: LandingPage, DeepLinking e Dashboard.
 
 Criado por: Calenzo
-Data: 09/04/2024 - 09/04/2024
+Data: 17/04/2025
 
 ## Como iniciar o projeto?
 
 Primeiro Passo:
 ```js
-yarn start
+yarn
 ```
 Segundo Passo:
 ```js
