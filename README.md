@@ -1,4 +1,4 @@
-# NeosDev - Challenge
+# Meetpoint Web
 
 Essa aplicação tem como objetivo: LandingPage, DeepLinking e Dashboard.
 
