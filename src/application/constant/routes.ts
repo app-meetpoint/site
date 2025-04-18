@@ -4,6 +4,8 @@ export const Routes = {
   ladingPage: "/",
   signIn: "/sign-in",
   deepLinking: "deep-linking",
+  privacyPolicy: "/privacy-policy",
+  termsOfUse: "/terms-of-use",
 };
 
 export const RoutesConfig = [
@@ -18,6 +20,14 @@ export const RoutesConfig = [
   {
     path: Routes.deepLinking,
     component: Pages.DeepLinking,
+  },
+  {
+    path: Routes.privacyPolicy,
+    component: Pages.PrivacyPolicy,
+  },
+  {
+    path: Routes.termsOfUse,
+    component: Pages.TermsOfUse,
   },
 ];
 
