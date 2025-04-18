@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 
 import * as Styled from "./styles";
@@ -18,7 +19,10 @@ export const DeepLinking = () => {
     const fallback = () => {
       if (/android/i.test(userAgent)) {
         window.location.href = androidPlayStoreLink;
-      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      } else if (
+        /iPad|iPhone|iPod/.test(userAgent) &&
+        !(window as any)?.MSStream
+      ) {
         window.location.href = iosAppStoreLink;
       } else {
         // Se estiver no desktop, exibe uma mensagem
