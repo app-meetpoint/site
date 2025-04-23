@@ -101,7 +101,10 @@ export const LandingPage = () => {
             </h1>
           </Styled.HeroTitle>
           <Styled.AppStoreButtons>
-            <Styled.StoreButton href="#" target="_blank">
+            <Styled.StoreButton
+              target="_blank"
+              href={storeLinks.ios(identifierStore.ios)}
+            >
               <FaApple size={24} />
               <div>
                 <small>Download na</small>
@@ -109,7 +112,11 @@ export const LandingPage = () => {
                 App Store
               </div>
             </Styled.StoreButton>
-            <Styled.StoreButton href="#" target="_blank">
+
+            <Styled.StoreButton
+              target="_blank"
+              href={storeLinks.android(identifierStore.android)}
+            >
               <FaGooglePlay size={24} />
               <div>
                 <small>Disponível no</small>
@@ -259,14 +266,27 @@ export const LandingPage = () => {
               <Styled.ContactSlogan>Seja Nosso Convidado.</Styled.ContactSlogan>
             </Styled.ContactLogo>
             <Styled.AppStoreButtons>
-              <Styled.StoreButton href="#" target="_blank">
-                <img
-                  src="/app-store-badge.png"
-                  alt="Download on the App Store"
-                />
+              <Styled.StoreButton
+                href={storeLinks.ios(identifierStore.ios)}
+                target="_blank"
+              >
+                <FaApple size={24} />
+                <div>
+                  <small>Download na</small>
+                  <br />
+                  App Store
+                </div>
               </Styled.StoreButton>
-              <Styled.StoreButton href="#" target="_blank">
-                <img src="/google-play-badge.png" alt="Get it on Google Play" />
+              <Styled.StoreButton
+                href={storeLinks.android(identifierStore.android)}
+                target="_blank"
+              >
+                <FaGooglePlay size={24} />
+                <div>
+                  <small>Disponível no</small>
+                  <br />
+                  Google Play
+                </div>
               </Styled.StoreButton>
             </Styled.AppStoreButtons>
             <Styled.ContactEmail>
