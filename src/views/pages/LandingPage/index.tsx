@@ -27,12 +27,10 @@ import Screen3 from '../../../../public/screen3.png'
 export const LandingPage = () => {
   const menuItems = [
     { name: 'Início' },
-    { name: 'Como funciona' },
     { name: 'Atualizações' },
     { name: 'Contatos' },
-    { name: 'Faq' },
-    { name: 'Download' },
     { name: 'Como funciona' },
+    { name: 'FAQ' },
   ]
 
   const features = [
