@@ -1,28 +1,15 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import Theme from './views/styles/theme'
-import Routes from './routes'
+import { ThemeProvider } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+import Theme from "views/styles/theme";
+import GlobalStyle from "views/styles/globalStyles";
 
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-`
+import Routes from "./routes";
 
-function App() {
-  return (
-    <ThemeProvider theme={Theme}>
-      <GlobalStyle />
-      <Routes />
-    </ThemeProvider>
-  )
-}
+const App = () => (
+  <ThemeProvider theme={Theme}>
+    <GlobalStyle />
+    <Routes />
+  </ThemeProvider>
+);
 
-export default App
+export default App;
