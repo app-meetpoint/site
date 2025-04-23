@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 `;
 
 export default GlobalStyle;
