@@ -1,21 +1,24 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 
+import { storeLinks } from "application/helpers";
+
 import * as Styled from "./styles";
+import { identifierStore } from "application/constant";
 
 export const DeepLinking = () => {
   const params = new URLSearchParams(window.location.search);
 
   const appDeeplink = params.get("urlRedirect");
-  const identifierAppStore = params.get("identifierAppStore");
-  const identifierPlayStore = params.get("identifierPlayStore");
 
   useEffect(() => {
     const userAgent =
       navigator.userAgent || navigator.vendor || (window as any).opera;
 
-    const iosAppStoreLink = `https://apps.apple.com/app/${identifierAppStore}`;
-    const androidPlayStoreLink = `https://play.google.com/store/apps/details?id=${identifierPlayStore}`;
+    const iosAppStoreLink = storeLinks.ios(identifierStore.ios);
+    const androidPlayStoreLink = storeLinks.android(identifierStore.android);
+
     const fallback = () => {
       if (/android/i.test(userAgent)) {
         window.location.href = androidPlayStoreLink;
@@ -25,12 +28,10 @@ export const DeepLinking = () => {
       ) {
         window.location.href = iosAppStoreLink;
       } else {
-        // Se estiver no desktop, exibe uma mensagem
         alert("Abra esse link no seu celular para instalar o app.");
       }
     };
 
-    // Tenta abrir o app
     const timeout = setTimeout(() => {
       fallback();
     }, 2000);
