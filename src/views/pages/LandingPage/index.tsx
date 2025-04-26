@@ -4,66 +4,65 @@ import {
   FaCalendarAlt,
   FaInstagram,
   FaLinkedinIn,
-  FaTiktok,
   FaUsers,
   FaComments,
   FaWallet,
   FaBars,
   FaStar,
-} from 'react-icons/fa'
-import { RiDoubleQuotesL } from 'react-icons/ri'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import * as Styled from './styles'
+} from "react-icons/fa";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import * as Styled from "./styles";
 
-import AppPreview from '../../../../public/mockup-meetpoint.png'
-import Logo from '../../../../public/meetpoint-logo.png'
-import ForbesLogo from '../../../../public/forbes-logo.png'
-import NYWLogo from '../../../../public/nyw-logo.png'
-import UsLogo from '../../../../public/us-logo.png'
-import HauteLogo from '../../../../public/haute-logo.png'
-import Screen1 from '../../../../public/screen1.png'
-import Screen2 from '../../../../public/screen2.png'
-import Screen3 from '../../../../public/screen3.png'
-import { storeLinks } from 'application/helpers'
-import { identifierStore } from 'application/constant'
+import AppPreview from "../../../../public/mockup-meetpoint.png";
+import Logo from "../../../../public/meetpoint-logo.png";
+import ForbesLogo from "../../../../public/forbes-logo.png";
+import NYWLogo from "../../../../public/nyw-logo.png";
+import UsLogo from "../../../../public/us-logo.png";
+import HauteLogo from "../../../../public/haute-logo.png";
+import Screen1 from "../../../../public/screen1.png";
+import Screen2 from "../../../../public/screen2.png";
+import Screen3 from "../../../../public/screen3.png";
+import { storeLinks } from "application/helpers";
+import { identifierStore } from "application/constant";
 
 export const LandingPage = () => {
   const menuItems = [
-    { name: 'Início', href: '#home' },
-    { name: 'Atualizações', href: '#features' },
-    { name: 'Como funciona', href: '#how-it-works' },
-    { name: 'Contatos', href: '#contact' },
-    { name: 'FAQ', href: '#faq' },
-  ]
+    { name: "Início", href: "#home" },
+    { name: "Atualizações", href: "#features" },
+    { name: "Como funciona", href: "#how-it-works" },
+    { name: "Contatos", href: "#contact" },
+    { name: "FAQ", href: "#faq" },
+  ];
 
   const features = [
     {
       icon: <FaCalendarAlt size={24} />,
-      title: 'Planejamento de Eventos Eficiente',
+      title: "Planejamento de Eventos Eficiente",
       description:
-        'Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.',
+        "Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.",
     },
     {
       icon: <FaUsers size={24} />,
-      title: 'Encontre seu Evento Perfeito',
+      title: "Encontre seu Evento Perfeito",
       description:
-        'Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.',
+        "Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.",
     },
     {
       icon: <FaComments size={24} />,
-      title: 'Expanda seu Círculo Social',
+      title: "Expanda seu Círculo Social",
       description:
-        'Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.',
+        "Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.",
     },
     {
       icon: <FaWallet size={24} />,
-      title: 'Divisão de Custos',
+      title: "Divisão de Custos",
       description:
-        'Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).',
+        "Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).",
     },
-  ]
+  ];
 
   const carouselSettings = {
     dots: true,
@@ -74,7 +73,7 @@ export const LandingPage = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-  }
+  };
 
   return (
     <Styled.Container>
@@ -369,7 +368,7 @@ export const LandingPage = () => {
         </Styled.ContactContainer>
       </Styled.ContactSection>
     </Styled.Container>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
