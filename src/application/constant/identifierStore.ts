@@ -1,4 +1,4 @@
 export const identifierStore = {
-  ios: "org.calenzo.MeetPoint",
+  ios: "com.meetpointapp",
   android: "com.meetpoint",
 };
