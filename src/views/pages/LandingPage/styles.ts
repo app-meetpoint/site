@@ -722,6 +722,7 @@ export const SocialIcon = styled.div`
     background-color: #333;
   }
 
+  &.email,
   &.instagram,
   &.tiktok,
   &.linkedin,
