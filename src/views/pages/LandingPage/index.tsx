@@ -9,60 +9,79 @@ import {
   FaWallet,
   FaBars,
   FaStar,
-} from "react-icons/fa";
-import { RiDoubleQuotesL } from "react-icons/ri";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import * as Styled from "./styles";
+  FaTimes,
+} from 'react-icons/fa'
+import { RiDoubleQuotesL } from 'react-icons/ri'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import * as Styled from './styles'
+import { useState, useEffect } from 'react'
 
-import AppPreview from "../../../../public/mockup-meetpoint.png";
-import Logo from "../../../../public/meetpoint-logo.png";
-import ForbesLogo from "../../../../public/forbes-logo.png";
-import NYWLogo from "../../../../public/nyw-logo.png";
-import UsLogo from "../../../../public/us-logo.png";
-import HauteLogo from "../../../../public/haute-logo.png";
-import Screen1 from "../../../../public/screen1.png";
-import Screen2 from "../../../../public/screen2.png";
-import Screen3 from "../../../../public/screen3.png";
-import { storeLinks } from "application/helpers";
-import { identifierStore } from "application/constant";
+import AppPreview from '../../../../public/mockup-meetpoint.webp'
+import Logo from '../../../../public/meetpoint-logo.png'
+import RockInRioLogo from '../../../../public/rockinrio.webp'
+import SymplaLogo from '../../../../public/sympla.webp'
+import TedLogo from '../../../../public/tedtalks.webp'
+import TicketMasterLogo from '../../../../public/Ticketmaster-Logo.webp'
+import MeetupLogo from '../../../../public/Meetup-Logo.webp'
+import AirBnbLogo from '../../../../public/Airbnb-Logo.webp'
+
+import Screen1 from '../../../../public/screen1.webp'
+import Screen2 from '../../../../public/screen2.webp'
+import Screen3 from '../../../../public/screen3.webp'
+import { storeLinks } from 'application/helpers'
+import { identifierStore } from 'application/constant'
 
 export const LandingPage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
   const menuItems = [
-    { name: "Início", href: "#home" },
-    { name: "Atualizações", href: "#features" },
-    { name: "Como funciona", href: "#how-it-works" },
-    { name: "Contatos", href: "#contact" },
-    { name: "FAQ", href: "#faq" },
-  ];
+    { name: 'Início', href: '#home' },
+    { name: 'Atualizações', href: '#features' },
+    { name: 'Como funciona', href: '#how-it-works' },
+    { name: 'Contatos', href: '#contact' },
+    // { name: 'FAQ', href: '#faq' },
+  ]
 
   const features = [
     {
       icon: <FaCalendarAlt size={24} />,
-      title: "Planejamento de Eventos Eficiente",
+      title: 'Planejamento de Eventos Eficiente',
       description:
-        "Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.",
+        'Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.',
     },
     {
       icon: <FaUsers size={24} />,
-      title: "Encontre seu Evento Perfeito",
+      title: 'Encontre seu Evento Perfeito',
       description:
-        "Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.",
+        'Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.',
     },
     {
       icon: <FaComments size={24} />,
-      title: "Expanda seu Círculo Social",
+      title: 'Expanda seu Círculo Social',
       description:
-        "Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.",
+        'Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.',
     },
     {
       icon: <FaWallet size={24} />,
-      title: "Divisão de Custos",
+      title: 'Divisão de Custos',
       description:
-        "Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).",
+        'Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).',
     },
-  ];
+  ]
 
   const carouselSettings = {
     dots: true,
@@ -73,7 +92,7 @@ export const LandingPage = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-  };
+  }
 
   return (
     <Styled.Container>
@@ -81,8 +100,10 @@ export const LandingPage = () => {
         <Styled.Logo>
           <img src={Logo} alt="Logo" />
         </Styled.Logo>
-        <Styled.MobileMenu>
-          <FaBars />
+        <Styled.MobileMenu
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </Styled.MobileMenu>
         <Styled.Items>
           {menuItems.map((item, index) => (
@@ -93,6 +114,37 @@ export const LandingPage = () => {
           <Styled.DownloadButton>Download</Styled.DownloadButton>
         </Styled.Items>
       </Styled.Header>
+
+      {isMobileMenuOpen && (
+        <>
+          <Styled.MobileMenuOverlay
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          <Styled.MobileMenuContainer>
+            <Styled.MobileMenuHeader>
+              <Styled.MobileMenuLogo>
+                <img src={Logo} alt="Logo" />
+              </Styled.MobileMenuLogo>
+              <Styled.MobileMenuClose
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <FaTimes />
+              </Styled.MobileMenuClose>
+            </Styled.MobileMenuHeader>
+            {menuItems.map((item, index) => (
+              <Styled.MobileMenuItem key={index}>
+                <Styled.MobileMenuLink
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Styled.MobileMenuLink>
+              </Styled.MobileMenuItem>
+            ))}
+            <Styled.MobileDownloadButton>Download</Styled.MobileDownloadButton>
+          </Styled.MobileMenuContainer>
+        </>
+      )}
 
       <Styled.HeroSection>
         <Styled.HeroContent>
@@ -141,10 +193,19 @@ export const LandingPage = () => {
             A nova era do compartilhamento e do networking. Como visto em:
           </Styled.SponsorsTitle>
           <Styled.SponsorsGrid>
-            <img src={ForbesLogo} alt="Forbes" />
-            <img src={NYWLogo} alt="New York Weekly" />
-            <img src={UsLogo} alt="US Magazine" />
-            <img src={HauteLogo} alt="Haute Living" />
+            <img src={RockInRioLogo} alt="Rock In Rio" />
+            <img src={TedLogo} alt="TedTalks" />
+            <img src={SymplaLogo} alt="Sympla" />
+            <img src={TicketMasterLogo} alt="TicketMaster" />
+            <img src={AirBnbLogo} alt="AirBnb" />
+            <img src={MeetupLogo} alt="Meetup" />
+
+            <img src={RockInRioLogo} alt="Rock In Rio" />
+            <img src={TedLogo} alt="TedTalks" />
+            <img src={SymplaLogo} alt="Sympla" />
+            <img src={TicketMasterLogo} alt="TicketMaster" />
+            <img src={AirBnbLogo} alt="AirBnb" />
+            <img src={MeetupLogo} alt="Meetup" />
           </Styled.SponsorsGrid>
         </Styled.SponsorsContainer>
       </Styled.SponsorsSection>
@@ -164,19 +225,56 @@ export const LandingPage = () => {
               </div>
             </Slider>
           </Styled.AppCarouselContainer>
-
           <Styled.FeaturesContent>
-            {features.map((feature, index) => (
-              <Styled.FeatureCard key={index}>
-                <Styled.FeatureIcon>{feature.icon}</Styled.FeatureIcon>
-                <Styled.FeatureContent>
-                  <Styled.FeatureTitle>{feature.title}</Styled.FeatureTitle>
-                  <Styled.FeatureDescription>
-                    {feature.description}
-                  </Styled.FeatureDescription>
-                </Styled.FeatureContent>
-              </Styled.FeatureCard>
-            ))}
+            <Styled.FeaturesHeader>
+              <Styled.FeaturesTitle>
+                Junte-se ao MeetPoint!
+              </Styled.FeaturesTitle>
+              <Styled.FeaturesDescription>
+                O MeetPoint é o aplicativo líder mundial para conhecer novas
+                pessoas, dividir despesas e compartilhar experiências noturnas
+                memoráveis. Baixe agora e descubra um mundo social totalmente
+                novo!
+              </Styled.FeaturesDescription>
+              <Styled.AppStoreButtons>
+                <Styled.StoreButton
+                  target="_blank"
+                  href={storeLinks.ios(identifierStore.ios)}
+                >
+                  <FaApple size={24} />
+                  <div>
+                    <small>Download na</small>
+                    <br />
+                    App Store
+                  </div>
+                </Styled.StoreButton>
+
+                <Styled.StoreButton
+                  target="_blank"
+                  href={storeLinks.android(identifierStore.android)}
+                >
+                  <FaGooglePlay size={24} />
+                  <div>
+                    <small>Disponível no</small>
+                    <br />
+                    Google Play
+                  </div>
+                </Styled.StoreButton>
+              </Styled.AppStoreButtons>
+            </Styled.FeaturesHeader>
+            <Styled.FeaturesGrid>
+              {features.map((feature, index) => (
+                <Styled.FeatureCard key={index}>
+                  <Styled.FeatureIcon>{feature.icon}</Styled.FeatureIcon>
+                  <Styled.FeatureContent>
+                    <Styled.FeatureTitle>{feature.title}</Styled.FeatureTitle>
+                    <Styled.FeatureDescription>
+                      {feature.description}
+                    </Styled.FeatureDescription>
+                  </Styled.FeatureContent>
+                </Styled.FeatureCard>
+              ))}
+            </Styled.FeaturesGrid>
           </Styled.FeaturesContent>
         </Styled.FeaturesContainer>
       </Styled.FeaturesSection>
@@ -368,7 +466,7 @@ export const LandingPage = () => {
         </Styled.ContactContainer>
       </Styled.ContactSection>
     </Styled.Container>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
