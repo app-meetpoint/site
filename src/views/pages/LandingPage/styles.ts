@@ -128,8 +128,7 @@ export const DownloadButton = styled.button`
 
 export const HeroSection = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem 5%;
   gap: 2rem;
   width: 100%;
@@ -140,12 +139,18 @@ export const HeroSection = styled.div`
   @media (max-width: 768px) {
     padding: 1rem;
     margin-top: 1rem;
+    flex-direction: column;
   }
 `
 
 export const HeroContent = styled.div`
   width: 100%;
   max-width: 600px;
+  margin-left: 10rem;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `
 
 export const HeroTitle = styled.div`
@@ -153,6 +158,11 @@ export const HeroTitle = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+  text-align: initial;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 
   h2 {
     font-size: 16px;
@@ -282,25 +292,21 @@ export const HeroImage = styled.div`
 export const SponsorsSection = styled.div`
   padding: 2rem 0;
   background: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
   }
 `
 
 export const SponsorsContainer = styled.div`
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 5%;
   width: 100%;
   box-sizing: border-box;
-
-  @media (max-width: 768px) {
-    padding: 0 1rem;
-  }
+  overflow: hidden;
 `
 
 export const SponsorsTitle = styled.p`
@@ -308,22 +314,30 @@ export const SponsorsTitle = styled.p`
   color: #718096;
   font-size: 1rem;
   margin-bottom: 2rem;
+  padding: 0 5%;
 `
 
 export const SponsorsGrid = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  gap: 14rem;
+  animation: marquee 30s linear infinite;
+  padding: 1rem 0;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 
   img {
     height: 32px;
     opacity: 0.7;
     transition: opacity 0.3s ease;
-    max-width: 120px;
+    min-width: 120px;
     object-fit: contain;
 
     &:hover {
@@ -332,12 +346,11 @@ export const SponsorsGrid = styled.div`
   }
 
   @media (max-width: 768px) {
-    gap: 2rem;
-    padding: 0;
+    gap: 3rem;
 
     img {
       height: 24px;
-      max-width: 80px;
+      min-width: 80px;
     }
   }
 `
@@ -354,19 +367,39 @@ export const FeaturesSection = styled.div`
   }
 `
 
+export const FeaturesHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
+export const FeaturesTitle = styled.h2`
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 700;
+`
+
+export const FeaturesDescription = styled.p`
+  font-size: 1.1rem;
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+`
+
 export const FeaturesContainer = styled.div`
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 4rem;
-  box-sizing: border-box;
-  align-items: start;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
     padding: 0 1rem;
   }
@@ -375,32 +408,30 @@ export const FeaturesContainer = styled.div`
 export const FeaturesContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
+  gap: 3rem;
+  width: 90%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`
+
+export const FeaturesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const FeatureCard = styled.div`
   display: flex;
-  align-items: flex-start;
   gap: 1rem;
-  padding: 0.5rem;
-  background: white;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  width: 100%;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    gap: 1rem;
-  }
+  padding: 0;
+  background: transparent;
 `
 
 export const FeatureIcon = styled.div`
@@ -413,17 +444,17 @@ export const FeatureIcon = styled.div`
   align-items: center;
   justify-content: center;
   color: #6c5ce7;
+  margin-bottom: 0.5rem;
 `
 
 export const FeatureContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  width: 100%;
+  gap: 0.5rem;
 `
 
 export const FeatureTitle = styled.h3`
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2d3748;
   font-weight: 600;
   margin: 0;
@@ -481,7 +512,7 @@ export const AppCarouselContainer = styled.div`
 
 export const CarouselImage = styled.img`
   width: 100%;
-  height: auto;
+  max-height: 800px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(108, 92, 231, 0.1);
   box-sizing: border-box;
@@ -706,6 +737,7 @@ export const SocialIcon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  padding: 0.5rem;
   background-color: #000;
   display: flex;
   align-items: center;
@@ -901,5 +933,100 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background-color: #333;
+  }
+`
+
+export const MobileMenuOverlay = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+`
+
+export const MobileMenuContainer = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  padding: 1rem;
+  z-index: 1000;
+  overflow-y: auto;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+`
+
+export const MobileMenuHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+`
+
+export const MobileMenuLogo = styled.div`
+  max-width: 60px;
+  max-height: 60px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+`
+
+export const MobileMenuClose = styled.button`
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+`
+
+export const MobileMenuItem = styled.div`
+  padding: 0.5rem 0;
+`
+
+export const MobileMenuLink = styled.a`
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.75rem 0;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #6c5ce7;
+  }
+`
+
+export const MobileDownloadButton = styled.button`
+  background: #6c5ce7;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 1rem;
+
+  &:hover {
+    background: #5f4dd0;
   }
 `
