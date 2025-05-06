@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Header = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const Header = styled.div`
   @media (max-width: 768px) {
     padding: 1rem;
   }
-`
+`;
 
 export const Items = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export const Items = styled.div`
   @media (max-width: 1024px) {
     display: none;
   }
-`
+`;
 
 export const MobileMenu = styled.button`
   display: none;
@@ -45,13 +45,13 @@ export const MobileMenu = styled.button`
   @media (max-width: 1024px) {
     display: block;
   }
-`
+`;
 
 export const Item = styled.div`
   display: flex;
   padding: 10px;
   cursor: pointer;
-`
+`;
 
 export const ItemText = styled.a`
   text-decoration: none;
@@ -61,12 +61,12 @@ export const ItemText = styled.a`
   &:hover {
     color: #6c5ce7;
   }
-`
+`;
 
 export const LandingContainer = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-`
+`;
 
 export const Navbar = styled.nav`
   display: flex;
@@ -75,7 +75,7 @@ export const Navbar = styled.nav`
   padding: 1rem 5%;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`
+`;
 
 export const Logo = styled.div`
   max-width: 80px;
@@ -94,13 +94,13 @@ export const Logo = styled.div`
     max-width: 60px;
     max-height: 60px;
   }
-`
+`;
 
 export const NavLinks = styled.div`
   display: flex;
   gap: 2rem;
   align-items: center;
-`
+`;
 
 export const NavLink = styled.a`
   text-decoration: none;
@@ -110,7 +110,7 @@ export const NavLink = styled.a`
   &:hover {
     color: #6c5ce7;
   }
-`
+`;
 
 export const DownloadButton = styled.button`
   background: #6c5ce7;
@@ -124,7 +124,7 @@ export const DownloadButton = styled.button`
   &:hover {
     background: #5f4dd0;
   }
-`
+`;
 
 export const HeroSection = styled.div`
   display: flex;
@@ -141,7 +141,7 @@ export const HeroSection = styled.div`
     margin-top: 1rem;
     flex-direction: column;
   }
-`
+`;
 
 export const HeroContent = styled.div`
   width: 100%;
@@ -151,7 +151,7 @@ export const HeroContent = styled.div`
   @media (max-width: 768px) {
     margin: 0;
   }
-`
+`;
 
 export const HeroTitle = styled.div`
   display: flex;
@@ -196,7 +196,7 @@ export const HeroTitle = styled.div`
       -webkit-text-fill-color: transparent;
     }
   }
-`
+`;
 
 export const HeroSubtitle = styled.p`
   font-size: 1.25rem;
@@ -206,7 +206,7 @@ export const HeroSubtitle = styled.p`
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
-`
+`;
 
 export const AppStoreButtons = styled.div`
   display: flex;
@@ -216,7 +216,7 @@ export const AppStoreButtons = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 export const StoreButton = styled.a`
   display: flex;
@@ -265,7 +265,7 @@ export const StoreButton = styled.a`
     font-weight: 500;
     line-height: 1.2;
   }
-`
+`;
 
 export const HeroImage = styled.div`
   width: 100%;
@@ -287,7 +287,7 @@ export const HeroImage = styled.div`
       max-width: 320px;
     }
   }
-`
+`;
 
 export const SponsorsSection = styled.div`
   padding: 2rem 0;
@@ -299,7 +299,7 @@ export const SponsorsSection = styled.div`
   @media (max-width: 768px) {
     padding: 2rem 0rem;
   }
-`
+`;
 
 export const SponsorsContainer = styled.div`
   max-width: 100%;
@@ -307,7 +307,7 @@ export const SponsorsContainer = styled.div`
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-`
+`;
 
 export const SponsorsTitle = styled.p`
   text-align: center;
@@ -315,7 +315,7 @@ export const SponsorsTitle = styled.p`
   font-size: 1rem;
   margin-bottom: 2rem;
   padding: 0 5%;
-`
+`;
 
 export const SponsorsGrid = styled.div`
   display: flex;
@@ -353,7 +353,7 @@ export const SponsorsGrid = styled.div`
       min-width: 80px;
     }
   }
-`
+`;
 
 export const FeaturesSection = styled.div`
   padding: 5rem 0;
@@ -365,20 +365,20 @@ export const FeaturesSection = styled.div`
   @media (max-width: 768px) {
     padding: 3rem 0;
   }
-`
+`;
 
 export const FeaturesHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`
+`;
 
 export const FeaturesTitle = styled.h2`
   font-size: 2.5rem;
   color: #2d3748;
   margin-bottom: 1rem;
   font-weight: 700;
-`
+`;
 
 export const FeaturesDescription = styled.p`
   font-size: 1.1rem;
@@ -386,7 +386,7 @@ export const FeaturesDescription = styled.p`
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 600px;
-`
+`;
 
 export const FeaturesContainer = styled.div`
   width: 100%;
@@ -403,7 +403,7 @@ export const FeaturesContainer = styled.div`
     gap: 2rem;
     padding: 0 1rem;
   }
-`
+`;
 
 export const FeaturesContent = styled.div`
   display: flex;
@@ -414,7 +414,7 @@ export const FeaturesContent = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 
 export const FeaturesGrid = styled.div`
   display: grid;
@@ -425,14 +425,14 @@ export const FeaturesGrid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const FeatureCard = styled.div`
   display: flex;
   gap: 1rem;
   padding: 0;
   background: transparent;
-`
+`;
 
 export const FeatureIcon = styled.div`
   width: 48px;
@@ -445,27 +445,27 @@ export const FeatureIcon = styled.div`
   justify-content: center;
   color: #6c5ce7;
   margin-bottom: 0.5rem;
-`
+`;
 
 export const FeatureContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-`
+`;
 
 export const FeatureTitle = styled.h3`
   font-size: 1rem;
   color: #2d3748;
   font-weight: 600;
   margin: 0;
-`
+`;
 
 export const FeatureDescription = styled.p`
   color: #718096;
   line-height: 1.5;
   font-size: 0.9rem;
   margin: 0;
-`
+`;
 
 export const AppCarouselContainer = styled.div`
   width: 100%;
@@ -508,7 +508,7 @@ export const AppCarouselContainer = styled.div`
   @media (max-width: 480px) {
     padding: 0.5rem;
   }
-`
+`;
 
 export const CarouselImage = styled.img`
   width: 100%;
@@ -516,14 +516,14 @@ export const CarouselImage = styled.img`
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(108, 92, 231, 0.1);
   box-sizing: border-box;
-`
+`;
 
 export const HowItWorksSection = styled.div`
   padding: 5rem 0;
   background: white;
   width: 100%;
   box-sizing: border-box;
-`
+`;
 
 export const HowItWorksContainer = styled.div`
   max-width: 1200px;
@@ -535,7 +535,7 @@ export const HowItWorksContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-`
+`;
 
 export const HowItWorksTitle = styled.h2`
   font-size: 3rem;
@@ -548,7 +548,7 @@ export const HowItWorksTitle = styled.h2`
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
-`
+`;
 
 export const HowItWorksDescription = styled.p`
   text-align: center;
@@ -556,7 +556,7 @@ export const HowItWorksDescription = styled.p`
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 2rem;
-`
+`;
 
 export const VideoContainer = styled.div`
   width: 100%;
@@ -566,14 +566,14 @@ export const VideoContainer = styled.div`
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(108, 92, 231, 0.15);
-`
+`;
 
 export const ReviewsSection = styled.div`
   padding: 5rem 0;
   background: white;
   width: 100%;
   box-sizing: border-box;
-`
+`;
 
 export const ReviewsContainer = styled.div`
   max-width: 1200px;
@@ -581,7 +581,7 @@ export const ReviewsContainer = styled.div`
   padding: 0 5%;
   width: 100%;
   box-sizing: border-box;
-`
+`;
 
 export const ReviewsTitle = styled.h2`
   font-size: 3rem;
@@ -594,7 +594,7 @@ export const ReviewsTitle = styled.h2`
     font-size: 2.5rem;
     text-align: center;
   }
-`
+`;
 
 export const ReviewsGrid = styled.div`
   display: grid;
@@ -608,7 +608,7 @@ export const ReviewsGrid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 export const ReviewCard = styled.div`
   background: white;
@@ -618,31 +618,31 @@ export const ReviewCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-`
+`;
 
 export const ReviewQuote = styled.div`
   color: #6c5ce7;
   font-size: 2rem;
   margin-bottom: -1rem;
-`
+`;
 
 export const ReviewText = styled.p`
   color: #4a5568;
   font-size: 1rem;
   line-height: 1.6;
   font-style: italic;
-`
+`;
 
 export const ReviewAuthor = styled.div`
   font-weight: 600;
   color: #2d3748;
-`
+`;
 
 export const ReviewStars = styled.div`
   color: #f6e05e;
   display: flex;
   gap: 0.25rem;
-`
+`;
 
 export const ContactSection = styled.section`
   background-color: #fff;
@@ -651,7 +651,7 @@ export const ContactSection = styled.section`
   @media (max-width: 768px) {
     padding: 40px 20px;
   }
-`
+`;
 
 export const ContactContainer = styled.div`
   max-width: 1200px;
@@ -663,7 +663,7 @@ export const ContactContainer = styled.div`
     flex-direction: column;
     gap: 60px;
   }
-`
+`;
 
 export const ContactLeft = styled.div`
   flex: 1;
@@ -676,7 +676,7 @@ export const ContactLeft = styled.div`
     align-items: flex-start;
     text-align: left;
   }
-`
+`;
 
 export const ContactTagline = styled.h2`
   font-size: 32px;
@@ -688,7 +688,7 @@ export const ContactTagline = styled.h2`
     font-size: 24px;
     line-height: 1.2;
   }
-`
+`;
 
 export const ContactLogo = styled.div`
   display: flex;
@@ -700,7 +700,7 @@ export const ContactLogo = styled.div`
     height: 40px;
     width: auto;
   }
-`
+`;
 
 export const ContactSlogan = styled.p`
   font-size: 18px;
@@ -710,7 +710,7 @@ export const ContactSlogan = styled.p`
   @media (max-width: 768px) {
     font-size: 16px;
   }
-`
+`;
 
 export const ContactEmail = styled.p`
   font-size: 16px;
@@ -721,7 +721,7 @@ export const ContactEmail = styled.p`
   @media (max-width: 768px) {
     font-size: 14px;
   }
-`
+`;
 
 export const SocialLinks = styled.div`
   display: flex;
@@ -731,7 +731,7 @@ export const SocialLinks = styled.div`
     justify-content: flex-start;
     gap: 16px;
   }
-`
+`;
 
 export const SocialIcon = styled.div`
   width: 40px;
@@ -764,7 +764,7 @@ export const SocialIcon = styled.div`
     background-position: center;
     background-repeat: no-repeat;
   }
-`
+`;
 
 export const FooterLinks = styled.div`
   display: flex;
@@ -777,7 +777,7 @@ export const FooterLinks = styled.div`
     gap: 12px;
     text-align: left;
   }
-`
+`;
 
 export const FooterLink = styled.a`
   font-size: 14px;
@@ -792,7 +792,7 @@ export const FooterLink = styled.a`
   &:hover {
     color: #333;
   }
-`
+`;
 
 export const Copyright = styled.p`
   font-size: 14px;
@@ -803,7 +803,7 @@ export const Copyright = styled.p`
   @media (max-width: 768px) {
     font-size: 14px;
   }
-`
+`;
 
 export const ContactRight = styled.div`
   flex: 1;
@@ -811,7 +811,7 @@ export const ContactRight = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 
 export const ContactTitle = styled.h2`
   font-size: 36px;
@@ -823,7 +823,7 @@ export const ContactTitle = styled.h2`
     font-size: 28px;
     text-align: left;
   }
-`
+`;
 
 export const ContactSubtitle = styled.p`
   font-size: 20px;
@@ -835,106 +835,7 @@ export const ContactSubtitle = styled.p`
     text-align: left;
     margin: 0 0 24px;
   }
-`
-
-export const ContactForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 40px;
-
-  @media (max-width: 768px) {
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-`
-
-export const FormRow = styled.div`
-  display: flex;
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 16px;
-  }
-`
-
-export const FormGroup = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`
-
-export const FormLabel = styled.label`
-  font-size: 14px;
-  color: #1a1a1a;
-  font-weight: 500;
-`
-
-export const FormInput = styled.input`
-  height: 48px;
-  padding: 0 16px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #1a1a1a;
-  transition: border-color 0.2s;
-
-  @media (max-width: 768px) {
-    height: 44px;
-    font-size: 14px;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: #007aff;
-  }
-`
-
-export const FormTextarea = styled.textarea`
-  padding: 16px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 16px;
-  color: #1a1a1a;
-  resize: vertical;
-  min-height: 120px;
-  transition: border-color 0.2s;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    min-height: 100px;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: #007aff;
-  }
-`
-
-export const SubmitButton = styled.button`
-  height: 48px;
-  padding: 0 32px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-
-  @media (max-width: 768px) {
-    height: 44px;
-    font-size: 14px;
-    width: 100%;
-  }
-
-  &:hover {
-    background-color: #333;
-  }
-`
+`;
 
 export const MobileMenuOverlay = styled.div`
   display: none;
@@ -949,7 +850,7 @@ export const MobileMenuOverlay = styled.div`
   @media (max-width: 1024px) {
     display: block;
   }
-`
+`;
 
 export const MobileMenuContainer = styled.div`
   display: none;
@@ -968,7 +869,7 @@ export const MobileMenuContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
   }
-`
+`;
 
 export const MobileMenuHeader = styled.div`
   display: flex;
@@ -976,7 +877,7 @@ export const MobileMenuHeader = styled.div`
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid #eee;
-`
+`;
 
 export const MobileMenuLogo = styled.div`
   max-width: 60px;
@@ -987,7 +888,7 @@ export const MobileMenuLogo = styled.div`
     height: 100%;
     object-fit: contain;
   }
-`
+`;
 
 export const MobileMenuClose = styled.button`
   background: none;
@@ -995,11 +896,11 @@ export const MobileMenuClose = styled.button`
   font-size: 1.5rem;
   color: #333;
   cursor: pointer;
-`
+`;
 
 export const MobileMenuItem = styled.div`
   padding: 0.5rem 0;
-`
+`;
 
 export const MobileMenuLink = styled.a`
   color: #333;
@@ -1013,7 +914,7 @@ export const MobileMenuLink = styled.a`
   &:hover {
     color: #6c5ce7;
   }
-`
+`;
 
 export const MobileDownloadButton = styled.button`
   background: #6c5ce7;
@@ -1029,4 +930,4 @@ export const MobileDownloadButton = styled.button`
   &:hover {
     background: #5f4dd0;
   }
-`
+`;

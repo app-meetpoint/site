@@ -9,10 +9,12 @@ const STAGE = {
     BASE_URL: "http://0.0.0.0:8000",
   },
   development: {
-    BASE_URL: "",
+    BASE_URL:
+      "https://paucyn3eedgbl4gpto27hmynv40umhap.lambda-url.sa-east-1.on.aws",
   },
   production: {
-    BASE_URL: "",
+    BASE_URL:
+      "https://uakawfsoqqiljsymwrdqyp7bty0frhmw.lambda-url.sa-east-1.on.aws",
   },
 };
 
@@ -21,7 +23,7 @@ const Config = {
     LINK: "link",
     USER: "user",
   },
-  STAGE: STAGE.local,
+  STAGE: STAGE.development,
 };
 
 export { Config };

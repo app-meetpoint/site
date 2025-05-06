@@ -10,78 +10,81 @@ import {
   FaBars,
   FaStar,
   FaTimes,
-} from 'react-icons/fa'
-import { RiDoubleQuotesL } from 'react-icons/ri'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import * as Styled from './styles'
-import { useState, useEffect } from 'react'
+} from "react-icons/fa";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import * as Styled from "./styles";
+import { useState, useEffect } from "react";
 
-import AppPreview from '../../../../public/mockup-meetpoint.webp'
-import Logo from '../../../../public/meetpoint-logo.png'
-import RockInRioLogo from '../../../../public/rockinrio.webp'
-import SymplaLogo from '../../../../public/sympla.webp'
-import TedLogo from '../../../../public/tedtalks.webp'
-import TicketMasterLogo from '../../../../public/Ticketmaster-Logo.webp'
-import MeetupLogo from '../../../../public/Meetup-Logo.webp'
-import AirBnbLogo from '../../../../public/Airbnb-Logo.webp'
+import { storeLinks } from "application/helpers";
+import { identifierStore, Routes } from "application/constant";
 
-import Screen1 from '../../../../public/screen1.webp'
-import Screen2 from '../../../../public/screen2.webp'
-import Screen3 from '../../../../public/screen3.webp'
-import { storeLinks } from 'application/helpers'
-import { identifierStore } from 'application/constant'
+import AppPreview from "../../../../public/mockup-meetpoint.webp";
+import Logo from "../../../../public/meetpoint-logo.png";
+import RockInRioLogo from "../../../../public/rockinrio.webp";
+import SymplaLogo from "../../../../public/sympla.webp";
+import TedLogo from "../../../../public/tedtalks.webp";
+import TicketMasterLogo from "../../../../public/Ticketmaster-Logo.webp";
+import MeetupLogo from "../../../../public/Meetup-Logo.webp";
+import AirBnbLogo from "../../../../public/Airbnb-Logo.webp";
+
+import Screen1 from "../../../../public/screen1.webp";
+import Screen2 from "../../../../public/screen2.webp";
+import Screen3 from "../../../../public/screen3.webp";
+
+import { FeedbackForm } from "./components";
 
 export const LandingPage = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [isMobileMenuOpen])
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
 
   const menuItems = [
-    { name: 'Início', href: '#home' },
-    { name: 'Atualizações', href: '#features' },
-    { name: 'Como funciona', href: '#how-it-works' },
-    { name: 'Contatos', href: '#contact' },
+    { name: "Início", href: "#home" },
+    { name: "Atualizações", href: "#features" },
+    { name: "Como funciona", href: "#how-it-works" },
+    { name: "Contatos", href: "#contact" },
     // { name: 'FAQ', href: '#faq' },
-  ]
+  ];
 
   const features = [
     {
       icon: <FaCalendarAlt size={24} />,
-      title: 'Planejamento de Eventos Eficiente',
+      title: "Planejamento de Eventos Eficiente",
       description:
-        'Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.',
+        "Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.",
     },
     {
       icon: <FaUsers size={24} />,
-      title: 'Encontre seu Evento Perfeito',
+      title: "Encontre seu Evento Perfeito",
       description:
-        'Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.',
+        "Não tem certeza se quer uma mesa de clube, encontro em um iate ou festa em mansão hoje à noite? Navegue e encontre os eventos mais badalados perto de você.",
     },
     {
       icon: <FaComments size={24} />,
-      title: 'Expanda seu Círculo Social',
+      title: "Expanda seu Círculo Social",
       description:
-        'Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.',
+        "Em uma nova cidade ou apenas quer expandir seu círculo? Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.",
     },
     {
       icon: <FaWallet size={24} />,
-      title: 'Divisão de Custos',
+      title: "Divisão de Custos",
       description:
-        'Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).',
+        "Divida custos de forma fácil e segura para que você possa compartilhar eventos de alto padrão por uma fração dos custos (ou até mesmo de graça!).",
     },
-  ]
+  ];
 
   const carouselSettings = {
     dots: true,
@@ -92,7 +95,7 @@ export const LandingPage = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-  }
+  };
 
   return (
     <Styled.Container>
@@ -426,27 +429,8 @@ export const LandingPage = () => {
             <Styled.ContactSubtitle>
               Adoraríamos ouvir você!
             </Styled.ContactSubtitle>
-            <Styled.ContactForm>
-              <Styled.FormRow>
-                <Styled.FormGroup>
-                  <Styled.FormLabel>Nome *</Styled.FormLabel>
-                  <Styled.FormInput type="text" required />
-                </Styled.FormGroup>
-                <Styled.FormGroup>
-                  <Styled.FormLabel>Sobrenome *</Styled.FormLabel>
-                  <Styled.FormInput type="text" required />
-                </Styled.FormGroup>
-              </Styled.FormRow>
-              <Styled.FormGroup>
-                <Styled.FormLabel>Email *</Styled.FormLabel>
-                <Styled.FormInput type="email" required />
-              </Styled.FormGroup>
-              <Styled.FormGroup>
-                <Styled.FormLabel>Deixe sua mensagem</Styled.FormLabel>
-                <Styled.FormTextarea rows={4} />
-              </Styled.FormGroup>
-              <Styled.SubmitButton type="submit">Enviar</Styled.SubmitButton>
-            </Styled.ContactForm>
+
+            <FeedbackForm />
 
             <Styled.FooterLinks>
               <Styled.FooterLink href="#">Carreiras</Styled.FooterLink>
@@ -469,4 +453,4 @@ export const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default LandingPage;
