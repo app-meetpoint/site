@@ -433,24 +433,26 @@ export const LandingPage = () => {
             <FeedbackForm />
 
             <Styled.FooterLinks>
-              <Styled.FooterLink href="#">Carreiras</Styled.FooterLink>
-              <Styled.FooterLink href="#">
+              {/* <Styled.FooterLink href="#">Carreiras</Styled.FooterLink> */}
+              <Styled.FooterLink href={Routes.privacyPolicy}>
                 Política de Privacidade
               </Styled.FooterLink>
-              <Styled.FooterLink href="#">Termos e Condições</Styled.FooterLink>
-              <Styled.FooterLink href="#">Termos - Loja</Styled.FooterLink>
-              <Styled.FooterLink href="#">
+              <Styled.FooterLink href={Routes.termsOfUse}>
+                Termos e Condições
+              </Styled.FooterLink>
+              {/* <Styled.FooterLink href="#">Termos - Loja</Styled.FooterLink> */}
+              {/* <Styled.FooterLink href="#">
                 Política de Reembolso
-              </Styled.FooterLink>
-              <Styled.FooterLink href="#">
+              </Styled.FooterLink> */}
+              {/* <Styled.FooterLink href="#">
                 Informações de Entrega
-              </Styled.FooterLink>
+              </Styled.FooterLink> */}
             </Styled.FooterLinks>
           </Styled.ContactRight>
         </Styled.ContactContainer>
       </Styled.ContactSection>
     </Styled.Container>
-  )
-}
+  );
+};
 
 export default LandingPage;
