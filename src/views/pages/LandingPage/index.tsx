@@ -434,10 +434,10 @@ export const LandingPage = () => {
 
             <Styled.FooterLinks>
               {/* <Styled.FooterLink href="#">Carreiras</Styled.FooterLink> */}
-              <Styled.FooterLink href={Routes.privacyPolicy}>
+              <Styled.FooterLink href={Routes.privacyPolicy} target="_blank">
                 Política de Privacidade
               </Styled.FooterLink>
-              <Styled.FooterLink href={Routes.termsOfUse}>
+              <Styled.FooterLink href={Routes.termsOfUse} target="_blank">
                 Termos e Condições
               </Styled.FooterLink>
               {/* <Styled.FooterLink href="#">Termos - Loja</Styled.FooterLink> */}
