@@ -20,24 +20,24 @@ export const PrivacyPolicy = () => {
       <Styled.Text>
         Coletamos os seguintes tipos de dados, de acordo com as permissões
         concedidas por você:
-        {"\n"}• <strong>Informações de identificação pessoal</strong>: nome,
+        <br />• <strong>Informações de identificação pessoal</strong>: nome,
         e-mail, foto de perfil (caso você use login social como Google ou
         Apple).
-        {"\n"}• <strong>Dados de localização aproximada</strong>: usados para
+        <br />• <strong>Dados de localização aproximada</strong>: usados para
         mostrar eventos próximos.
-        {"\n"}• <strong>Dados de uso</strong>: interações no app, tempo de uso e
+        <br />• <strong>Dados de uso</strong>: interações no app, tempo de uso e
         preferências.
-        {"\n"}• <strong>Identificadores do dispositivo</strong>: como ID do
+        <br />• <strong>Identificadores do dispositivo</strong>: como ID do
         dispositivo para melhorar a segurança e desempenho do app.
       </Styled.Text>
 
       <Styled.Subtitle>2. Finalidade do Uso dos Dados</Styled.Subtitle>
       <Styled.Text>
         Utilizamos os dados coletados para:
-        {"\n"}• Exibir eventos próximos da sua localização.
-        {"\n"}• Personalizar sua experiência no app.
-        {"\n"}• Melhorar o desempenho, segurança e usabilidade da plataforma.
-        {"\n"}• Enviar notificações sobre eventos, atualizações ou mudanças no
+        <br />• Exibir eventos próximos da sua localização.
+        <br />• Personalizar sua experiência no app.
+        <br />• Melhorar o desempenho, segurança e usabilidade da plataforma.
+        <br />• Enviar notificações sobre eventos, atualizações ou mudanças no
         serviço.
       </Styled.Text>
 
@@ -47,29 +47,31 @@ export const PrivacyPolicy = () => {
       <Styled.Text>
         Podemos compartilhar dados com os seguintes serviços de terceiros,
         sempre com o objetivo de melhorar a experiência do usuário:
-        {"\n"}• <strong>Mapas (Google Maps)</strong> – exibição de eventos em
+        <br />• <strong>Mapas (Google Maps)</strong> – exibição de eventos em
         mapas.
-        {"\n"}Não vendemos dados dos usuários a terceiros.
+        <br />
+        Não vendemos dados dos usuários a terceiros.
       </Styled.Text>
 
       <Styled.Subtitle>4. Armazenamento e Segurança</Styled.Subtitle>
       <Styled.Text>
         • Os dados são armazenados em servidores seguros e protegidos por
         criptografia.
-        {"\n"}• A transmissão de dados é feita por meio de protocolos seguros
+        <br />• A transmissão de dados é feita por meio de protocolos seguros
         (HTTPS).
-        {"\n"}• Aplicamos medidas técnicas e organizacionais para evitar acesso
+        <br />• Aplicamos medidas técnicas e organizacionais para evitar acesso
         não autorizado, alteração, divulgação ou destruição dos dados.
       </Styled.Text>
 
       <Styled.Subtitle>5. Direitos dos Usuários</Styled.Subtitle>
       <Styled.Text>
         Você pode, a qualquer momento:
-        {"\n"}• Acessar seus dados.
-        {"\n"}• Corrigir dados incorretos.
-        {"\n"}• Solicitar a exclusão de sua conta e dados pessoais.
-        {"\n"}• Revogar permissões de localização ou notificações.
-        {"\n"}Para isso, entre em contato conosco pelo e-mail: {contactEmail}
+        <br />• Acessar seus dados.
+        <br />• Corrigir dados incorretos.
+        <br />• Solicitar a exclusão de sua conta e dados pessoais.
+        <br />• Revogar permissões de localização ou notificações.
+        <br />
+        Para isso, entre em contato conosco pelo e-mail: {contactEmail}
       </Styled.Text>
 
       <Styled.Subtitle>6. Retenção de Dados</Styled.Subtitle>
@@ -89,8 +91,8 @@ export const PrivacyPolicy = () => {
       <Styled.Text>
         Em caso de dúvidas, sugestões ou solicitações relacionadas à sua
         privacidade, entre em contato:
-        {"\n"}• <strong>E-mail:</strong> {contactEmail}
-        {"\n"}• <strong>Responsável:</strong> Equipe MeetPoint
+        <br />• <strong>E-mail:</strong> {contactEmail}
+        <br />• <strong>Responsável:</strong> Equipe MeetPoint
       </Styled.Text>
     </Styled.Container>
   );
