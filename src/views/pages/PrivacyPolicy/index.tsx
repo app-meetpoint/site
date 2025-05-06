@@ -47,9 +47,6 @@ export const PrivacyPolicy = () => {
       <Styled.Text>
         Podemos compartilhar dados com os seguintes serviços de terceiros,
         sempre com o objetivo de melhorar a experiência do usuário:
-        {"\n"}• <strong>Firebase (Google)</strong> – autenticação, banco de
-        dados em tempo real, analytics e notificações push.
-        {"\n"}• <strong>Google Analytics</strong> – análise de uso e desempenho.
         {"\n"}• <strong>Mapas (Google Maps)</strong> – exibição de eventos em
         mapas.
         {"\n"}Não vendemos dados dos usuários a terceiros.
