@@ -5,66 +5,95 @@ export const PrivacyPolicy = () => {
 
   return (
     <Styled.Container>
-      <Styled.Title>Política de Privacidade</Styled.Title>
+      <Styled.Title>Política de Privacidade — MeetPoint</Styled.Title>
 
-      <Styled.Subtitle>Última atualização: 18 de abril de 2025</Styled.Subtitle>
+      <Styled.Subtitle>Última atualização: 6 de maio de 2025</Styled.Subtitle>
 
       <Styled.Text>
-        Vivemos num tempo em que cada gesto digital carrega rastros. No espaço
-        entre o toque e o código, reside uma troca: você compartilha fragmentos
-        de si, e nós, responsáveis por este aplicativo, acolhemos essas partes
-        com cuidado e intenção.
+        O aplicativo <strong>MeetPoint</strong> respeita sua privacidade e está
+        comprometido com a proteção de seus dados pessoais. Esta política
+        explica quais informações coletamos, como usamos e compartilhamos, e
+        quais são os seus direitos.
       </Styled.Text>
 
-      <Styled.Subtitle>O que recebemos</Styled.Subtitle>
-
+      <Styled.Subtitle>1. Dados Coletados</Styled.Subtitle>
       <Styled.Text>
-        Ao habitar este espaço de eventos e encontros, algumas informações
-        chegam até nós — como seu nome, seu ponto no mapa, e traços das suas
-        escolhas dentro do app. Não buscamos conhecer você, mas tornar a
-        experiência mais fluida, mais próxima, mais sua.
+        Coletamos os seguintes tipos de dados, de acordo com as permissões
+        concedidas por você:
+        {"\n"}• <strong>Informações de identificação pessoal</strong>: nome,
+        e-mail, foto de perfil (caso você use login social como Google ou
+        Apple).
+        {"\n"}• <strong>Dados de localização aproximada</strong>: usados para
+        mostrar eventos próximos.
+        {"\n"}• <strong>Dados de uso</strong>: interações no app, tempo de uso e
+        preferências.
+        {"\n"}• <strong>Identificadores do dispositivo</strong>: como ID do
+        dispositivo para melhorar a segurança e desempenho do app.
       </Styled.Text>
 
-      <Styled.Subtitle>O que fazemos com isso</Styled.Subtitle>
-
+      <Styled.Subtitle>2. Finalidade do Uso dos Dados</Styled.Subtitle>
       <Styled.Text>
-        As informações coletadas não são mercadoria. Elas são bússola: nos
-        ajudam a guiar sua navegação, sugerir caminhos, avisar sobre movimentos,
-        proteger o espaço de interferências externas. Ajudam-nos a manter viva a
-        promessa de um app que conecta o desejo de estar junto com a realidade
-        de onde e quando.
+        Utilizamos os dados coletados para:
+        {"\n"}• Exibir eventos próximos da sua localização.
+        {"\n"}• Personalizar sua experiência no app.
+        {"\n"}• Melhorar o desempenho, segurança e usabilidade da plataforma.
+        {"\n"}• Enviar notificações sobre eventos, atualizações ou mudanças no
+        serviço.
       </Styled.Text>
 
-      <Styled.Subtitle>Com quem partilhamos</Styled.Subtitle>
-
+      <Styled.Subtitle>
+        3. Compartilhamento de Dados com Terceiros
+      </Styled.Subtitle>
       <Styled.Text>
-        O que recebemos de você permanece conosco — salvo quando a lei exige ou
-        quando há necessidade de proteger você, nós, ou o próprio espaço. Alguns
-        serviços que habitam essa engrenagem (como servidores ou contadores de
-        passos digitais) podem ter acesso, mas sempre com discrição e propósito.
+        Podemos compartilhar dados com os seguintes serviços de terceiros,
+        sempre com o objetivo de melhorar a experiência do usuário:
+        {"\n"}• <strong>Firebase (Google)</strong> – autenticação, banco de
+        dados em tempo real, analytics e notificações push.
+        {"\n"}• <strong>Google Analytics</strong> – análise de uso e desempenho.
+        {"\n"}• <strong>Mapas (Google Maps)</strong> – exibição de eventos em
+        mapas.
+        {"\n"}Não vendemos dados dos usuários a terceiros.
       </Styled.Text>
 
-      <Styled.Subtitle>O tempo e o esquecimento</Styled.Subtitle>
-
+      <Styled.Subtitle>4. Armazenamento e Segurança</Styled.Subtitle>
       <Styled.Text>
-        As informações vivem conosco enquanto forem úteis. Mas você tem o
-        direito de lembrar e o direito de ser esquecido. Pode pedir acesso,
-        correção ou apagamento. Basta dizer, e escutaremos: [{contactEmail}]
+        • Os dados são armazenados em servidores seguros e protegidos por
+        criptografia.
+        {"\n"}• A transmissão de dados é feita por meio de protocolos seguros
+        (HTTPS).
+        {"\n"}• Aplicamos medidas técnicas e organizacionais para evitar acesso
+        não autorizado, alteração, divulgação ou destruição dos dados.
       </Styled.Text>
 
-      <Styled.Subtitle>Palavras finais</Styled.Subtitle>
+      <Styled.Subtitle>5. Direitos dos Usuários</Styled.Subtitle>
+      <Styled.Text>
+        Você pode, a qualquer momento:
+        {"\n"}• Acessar seus dados.
+        {"\n"}• Corrigir dados incorretos.
+        {"\n"}• Solicitar a exclusão de sua conta e dados pessoais.
+        {"\n"}• Revogar permissões de localização ou notificações.
+        {"\n"}Para isso, entre em contato conosco pelo e-mail: {contactEmail}
+      </Styled.Text>
 
+      <Styled.Subtitle>6. Retenção de Dados</Styled.Subtitle>
       <Styled.Text>
-        Essa política pode mudar, como tudo muda. Mas se mudar, você saberá.
-        Porque transparência não é só regra — é respeito.
+        Mantemos seus dados enquanto sua conta estiver ativa. Após a exclusão da
+        conta, os dados são apagados de forma segura em até 30 dias, exceto
+        quando houver obrigação legal de retenção.
       </Styled.Text>
+
+      <Styled.Subtitle>7. Alterações nesta Política</Styled.Subtitle>
       <Styled.Text>
-        Este aplicativo não é um lugar para crianças, e, se por acaso o for, é
-        preciso que os responsáveis estejam cientes e em acordo.
+        Esta política poderá ser atualizada. Em caso de alterações
+        significativas, notificaremos você pelo app ou e-mail, se aplicável.
       </Styled.Text>
+
+      <Styled.Subtitle>8. Contato</Styled.Subtitle>
       <Styled.Text>
-        Se você leu até aqui, saiba: levamos a sério o invisível. E zelamos por
-        ele.
+        Em caso de dúvidas, sugestões ou solicitações relacionadas à sua
+        privacidade, entre em contato:
+        {"\n"}• <strong>E-mail:</strong> {contactEmail}
+        {"\n"}• <strong>Responsável:</strong> Equipe MeetPoint
       </Styled.Text>
     </Styled.Container>
   );
