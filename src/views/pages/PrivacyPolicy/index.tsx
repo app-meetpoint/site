@@ -13,7 +13,7 @@ export const PrivacyPolicy = () => {
         O aplicativo <strong>MeetPoint</strong> respeita sua privacidade e está
         comprometido com a proteção de seus dados pessoais. Esta política
         explica quais informações coletamos, como usamos e compartilhamos, e
-        quais são os seus direitos.
+        quais são os seus direitos. O MeetPoint é uma plataforma social para conectar pessoas com interesses em eventos locais, <strong>sem foco em relacionamentos românticos ou serviços de namoro</strong>, e não oferece serviços médicos, de saúde ou financeiros.
       </Styled.Text>
 
       <Styled.Subtitle>1. Dados Coletados</Styled.Subtitle>
@@ -23,8 +23,7 @@ export const PrivacyPolicy = () => {
         <br />• <strong>Informações de identificação pessoal</strong>: nome,
         e-mail, foto de perfil (caso você use login social como Google ou
         Apple).
-        <br />• <strong>Dados de localização aproximada</strong>: usados para
-        mostrar eventos próximos.
+        <br />• <strong>Dados de localização aproximada</strong>: usados exclusivamente para mostrar eventos próximos em sua área. A localização não é compartilhada publicamente com outros usuários.
         <br />• <strong>Dados de uso</strong>: interações no app, tempo de uso e
         preferências.
         <br />• <strong>Identificadores do dispositivo</strong>: como ID do
@@ -34,29 +33,30 @@ export const PrivacyPolicy = () => {
       <Styled.Subtitle>2. Finalidade do Uso dos Dados</Styled.Subtitle>
       <Styled.Text>
         Utilizamos os dados coletados para:
-        <br />• Exibir eventos próximos da sua localização.
+        <br />• Exibir eventos próximos da sua localização (sem compartilhar sua posição exata com outros usuários).
         <br />• Personalizar sua experiência no app.
         <br />• Melhorar o desempenho, segurança e usabilidade da plataforma.
         <br />• Enviar notificações sobre eventos, atualizações ou mudanças no
         serviço.
+        <br /><br />
+        <strong>Não utilizamos dados para:</strong>
+        <br />• Serviços de namoro ou relacionamentos românticos
+        <br />• Qualquer finalidade médica, de saúde ou financeira
       </Styled.Text>
 
-      <Styled.Subtitle>
-        3. Compartilhamento de Dados com Terceiros
-      </Styled.Subtitle>
+      <Styled.Subtitle>3. Compartilhamento de Dados com Terceiros</Styled.Subtitle>
       <Styled.Text>
-        Podemos compartilhar dados com os seguintes serviços de terceiros,
+        Podemos compartilhar dados apenas com os seguintes serviços de terceiros,
         sempre com o objetivo de melhorar a experiência do usuário:
         <br />• <strong>Mapas (Google Maps)</strong> – exibição de eventos em
         mapas.
         <br />
-        Não vendemos dados dos usuários a terceiros.
+        <strong>Não vendemos, alugamos ou compartilhamos dados pessoais</strong> com terceiros para marketing ou outros fins não autorizados.
       </Styled.Text>
 
       <Styled.Subtitle>4. Armazenamento e Segurança</Styled.Subtitle>
       <Styled.Text>
-        • Os dados são armazenados em servidores seguros e protegidos por
-        criptografia.
+        • Os dados são armazenados em servidores seguros na região da América do Sul, protegidos por criptografia.
         <br />• A transmissão de dados é feita por meio de protocolos seguros
         (HTTPS).
         <br />• Aplicamos medidas técnicas e organizacionais para evitar acesso
@@ -72,19 +72,21 @@ export const PrivacyPolicy = () => {
         <br />• Revogar permissões de localização ou notificações.
         <br />
         Para isso, entre em contato conosco pelo e-mail: {contactEmail}
+        <br /><br />
+        <strong>Observação:</strong> A revogação da permissão de localização pode limitar a funcionalidade de mostrar eventos próximos.
       </Styled.Text>
 
       <Styled.Subtitle>6. Retenção de Dados</Styled.Subtitle>
       <Styled.Text>
         Mantemos seus dados enquanto sua conta estiver ativa. Após a exclusão da
-        conta, os dados são apagados de forma segura em até 30 dias, exceto
-        quando houver obrigação legal de retenção.
+        conta, os dados são apagados permanentemente dentro de 30 dias, exceto
+        quando houver obrigação legal de retenção. Dados anonimizados podem ser mantidos para estatísticas e melhorias no serviço.
       </Styled.Text>
 
       <Styled.Subtitle>7. Alterações nesta Política</Styled.Subtitle>
       <Styled.Text>
         Esta política poderá ser atualizada. Em caso de alterações
-        significativas, notificaremos você pelo app ou e-mail, se aplicável.
+        significativas, notificaremos você pelo app ou e-mail com 30 dias de antecedência. O uso continuado do app após as alterações constitui aceitação da nova política.
       </Styled.Text>
 
       <Styled.Subtitle>8. Contato</Styled.Subtitle>
@@ -93,6 +95,7 @@ export const PrivacyPolicy = () => {
         privacidade, entre em contato:
         <br />• <strong>E-mail:</strong> {contactEmail}
         <br />• <strong>Responsável:</strong> Equipe MeetPoint
+        <br />• <strong>Site:</strong> https://meetpointapp.com.br/privacidade
       </Styled.Text>
     </Styled.Container>
   );
