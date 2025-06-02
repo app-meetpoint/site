@@ -6,6 +6,7 @@ export const Routes = {
   deepLinking: "deep-linking",
   privacyPolicy: "/privacy-policy",
   termsOfUse: "/terms-of-use",
+  csaePolicy: "/csae-policy",
 };
 
 export const RoutesConfig = [
@@ -29,6 +30,10 @@ export const RoutesConfig = [
     path: Routes.termsOfUse,
     component: Pages.TermsOfUse,
   },
+  {
+    path: Routes.csaePolicy,
+    component: Pages.CsaePolicy,
+  }
 ];
 
 export const routesWithPermission = [Routes.signIn];

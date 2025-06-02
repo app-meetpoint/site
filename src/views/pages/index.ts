@@ -3,3 +3,4 @@ export { TermsOfUse } from "./TermsOfUse";
 export { LandingPage } from "./LandingPage";
 export { DeepLinking } from "./DeepLinking";
 export { PrivacyPolicy } from "./PrivacyPolicy";
+export { CsaePolicy } from "./CsaePolicy";
