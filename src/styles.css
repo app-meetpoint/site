@@ -15,6 +15,21 @@ body {
   padding: 1rem 5%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
   box-sizing: border-box;
+  position: fixed;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+}
+
+.download-button {
+  background: rgb(108, 92, 231);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .logo img {
