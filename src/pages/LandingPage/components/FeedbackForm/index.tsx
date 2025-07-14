@@ -1,6 +1,6 @@
 import React from "react";
 
-import { userService } from "infrastructure/services";
+import { userService } from "../../../../services";
 
 import * as Styled from "./styles";
 

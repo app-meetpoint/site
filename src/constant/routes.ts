@@ -1,4 +1,4 @@
-import * as Pages from "../../views/pages";
+import * as Pages from "../../../pages";
 
 export const Routes = {
   ladingPage: "/",
