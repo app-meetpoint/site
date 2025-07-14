@@ -1,13 +1,97 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/meetpoint-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MeetPoint</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/pages/LandingPage/index.html"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MeetPoint - Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="../public/meetpoint-logo.png" alt="Logo MeetPoint" style="height:48px;">
+      <nav>
+        <a href="#home">Início</a>
+        <a href="#features">Atualizações</a>
+        <a href="#how-it-works">Como funciona</a>
+        <a href="#contact">Contatos</a>
+        <a href="#download" class="download-btn">Download</a>
+      </nav>
+    </header>
+    <section id="home">
+      <h2>DESCUBRA E PARTICIPE DE EVENTOS EXCLUSIVOS PERTO DE VOCÊ</h2>
+      <h1>Conecte-se à <span style="color:#0077ff;">experiência</span><br>que você merece</h1>
+      <div class="app-buttons">
+        <a href="#" class="store-btn">App Store</a>
+        <a href="#" class="store-btn">Google Play</a>
+      </div>
+      <img src="../public/mockup-meetpoint.webp" alt="MeetPoint App Screenshot" style="max-width:300px; margin:32px 0;">
+    </section>
+    <section id="features">
+      <h3>Junte-se ao MeetPoint!</h3>
+      <p>O MeetPoint é o aplicativo líder mundial para conhecer novas pessoas, dividir despesas e compartilhar experiências noturnas memoráveis. Baixe agora e descubra um mundo social totalmente novo!</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <strong>Planejamento de Eventos Eficiente</strong>
+          <p>Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Encontre seu Evento Perfeito</strong>
+          <p>Navegue e encontre os eventos mais badalados perto de você.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Expanda seu Círculo Social</strong>
+          <p>Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.</p>
+        </div>
+        <div class="feature-card">
+          <strong>Divisão de Custos</strong>
+          <p>Divida custos de forma fácil e segura para compartilhar eventos de alto padrão por uma fração dos custos.</p>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works">
+      <h3>Como Funciona</h3>
+      <p>MeetPoint é uma plataforma completa para compartilhar e participar de todos os tipos de eventos sociais.</p>
+      <video width="100%" height="auto" controls poster="../public/video-thumbnail.jpg">
+        <source src="../public/demo-video.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </section>
+    <section id="reviews">
+      <h3>Avaliações dos Usuários</h3>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <blockquote>"Este app é essencial para quem quer curtir em São Paulo ou Rio. Não sei como vivi tanto tempo sem ele!"</blockquote>
+          <span>Isabella Santos ★★★★★</span>
+        </div>
+        <div class="review-card">
+          <blockquote>"Nunca pensei que um app pudesse mudar minha vida social. Agora vou a eventos e conheço pessoas incríveis que nunca teria conhecido antes."</blockquote>
+          <span>David Silva ★★★★★</span>
+        </div>
+        <div class="review-card">
+          <blockquote>"Quem teve a ideia de juntar rede social, eventos e encontros em um só app... Simplesmente brilhante! O MeetPoint revolucionou minha forma de socializar."</blockquote>
+          <span>Carla Oliveira ★★★★★</span>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h3>Compartilhando experiências, de forma simples.</h3>
+      <img src="../public/meetpoint-logo.png" alt="MeetPoint Logo" style="height:40px;">
+      <p>Seja Nosso Convidado.</p>
+      <div class="app-buttons">
+        <a href="#" class="store-btn">App Store</a>
+        <a href="#" class="store-btn">Google Play</a>
+      </div>
+      <p>Email: contato@meetpointapp.com.br</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+      <footer>
+        <a href="privacy-policy.html" target="_blank">Política de Privacidade</a> |
+        <a href="terms-of-use.html" target="_blank">Termos e Condições</a>
+        <br>Copyright © 2025 MeetPoint Inc. Todos os direitos reservados.
+      </footer>
+    </section>
+  </div>
+</body>
 </html>

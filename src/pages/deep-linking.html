@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionamento MeetPoint</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const appDeeplink = params.get('urlRedirect');
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const iosAppStoreLink = 'https://apps.apple.com/app/id000000000'; // Substitua pelo link real
+      const androidPlayStoreLink = 'https://play.google.com/store/apps/details?id=com.meetpoint'; // Substitua pelo link real
+      function fallback() {
+        if (/android/i.test(userAgent)) {
+          window.location.href = androidPlayStoreLink;
+        } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+          window.location.href = iosAppStoreLink;
+        } else {
+          alert('Abra esse link no seu celular para instalar o app.');
+        }
+      }
+      setTimeout(fallback, 2000);
+      if (appDeeplink) {
+        window.location.href = appDeeplink;
+      }
+    };
+  </script>
+</head>
+<body>
+  <div class="container">
+    <p>Redirecionando para o aplicativo...</p>
+  </div>
+</body>
+</html>

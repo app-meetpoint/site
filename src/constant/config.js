@@ -1,9 +1,3 @@
-export enum ISTAGE {
-  local = "local",
-  development = "development",
-  production = "production",
-}
-
 const STAGE = {
   local: {
     BASE_URL: "http://0.0.0.0:8000",
