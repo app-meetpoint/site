@@ -1,97 +1,514 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>MeetPoint - Landing Page</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <header>
-      <img src="../public/meetpoint-logo.png" alt="Logo MeetPoint" style="height:48px;">
-      <nav>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeetPoint - Descubra e Participe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./assets/meetpoint-logo.png" alt="Logo MeetPoint" />
+      </div>
+      <nav class="nav-desktop">
         <a href="#home">Início</a>
         <a href="#features">Atualizações</a>
         <a href="#how-it-works">Como funciona</a>
         <a href="#contact">Contatos</a>
-        <a href="#download" class="download-btn">Download</a>
+        <button class="download-button">Download</button>
       </nav>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </header>
-    <section id="home">
-      <h2>DESCUBRA E PARTICIPE DE EVENTOS EXCLUSIVOS PERTO DE VOCÊ</h2>
-      <h1>Conecte-se à <span style="color:#0077ff;">experiência</span><br>que você merece</h1>
-      <div class="app-buttons">
-        <a href="#" class="store-btn">App Store</a>
-        <a href="#" class="store-btn">Google Play</a>
-      </div>
-      <img src="../public/mockup-meetpoint.webp" alt="MeetPoint App Screenshot" style="max-width:300px; margin:32px 0;">
-    </section>
-    <section id="features">
-      <h3>Junte-se ao MeetPoint!</h3>
-      <p>O MeetPoint é o aplicativo líder mundial para conhecer novas pessoas, dividir despesas e compartilhar experiências noturnas memoráveis. Baixe agora e descubra um mundo social totalmente novo!</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <strong>Planejamento de Eventos Eficiente</strong>
-          <p>Simplifique sua organização de eventos, gerenciamento de convidados e receba atualizações em tempo real no chat do grupo do evento.</p>
-        </div>
-        <div class="feature-card">
-          <strong>Encontre seu Evento Perfeito</strong>
-          <p>Navegue e encontre os eventos mais badalados perto de você.</p>
-        </div>
-        <div class="feature-card">
-          <strong>Expanda seu Círculo Social</strong>
-          <p>Conhecer novos amigos nunca foi tão fácil. Descubra como vocês se conectaram.</p>
-        </div>
-        <div class="feature-card">
-          <strong>Divisão de Custos</strong>
-          <p>Divida custos de forma fácil e segura para compartilhar eventos de alto padrão por uma fração dos custos.</p>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h2>DESCUBRA E PARTICIPE DE EVENTOS EXCLUSIVOS PERTO DE VOCÊ</h2>
+        <h1>
+          Conecte-se à <span>experiência</span><br />
+          que você merece
+        </h1>
+        <div class="store-buttons">
+          <a
+            href="https://apps.apple.com/br/app/meetpoint/id6745105203"
+            class="store-btn"
+          >
+            <i class="fab fa-apple"></i>
+            <div><small>Download na</small><br />App Store</div>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.meetpoint"
+            class="store-btn"
+          >
+            <i class="fab fa-google-play"></i>
+            <div><small>Disponível no</small><br />Google Play</div>
+          </a>
         </div>
       </div>
-    </section>
-    <section id="how-it-works">
-      <h3>Como Funciona</h3>
-      <p>MeetPoint é uma plataforma completa para compartilhar e participar de todos os tipos de eventos sociais.</p>
-      <video width="100%" height="auto" controls poster="../public/video-thumbnail.jpg">
-        <source src="../public/demo-video.mp4" type="video/mp4">
-        Seu navegador não suporta a tag de vídeo.
-      </video>
-    </section>
-    <section id="reviews">
-      <h3>Avaliações dos Usuários</h3>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <blockquote>"Este app é essencial para quem quer curtir em São Paulo ou Rio. Não sei como vivi tanto tempo sem ele!"</blockquote>
-          <span>Isabella Santos ★★★★★</span>
-        </div>
-        <div class="review-card">
-          <blockquote>"Nunca pensei que um app pudesse mudar minha vida social. Agora vou a eventos e conheço pessoas incríveis que nunca teria conhecido antes."</blockquote>
-          <span>David Silva ★★★★★</span>
-        </div>
-        <div class="review-card">
-          <blockquote>"Quem teve a ideia de juntar rede social, eventos e encontros em um só app... Simplesmente brilhante! O MeetPoint revolucionou minha forma de socializar."</blockquote>
-          <span>Carla Oliveira ★★★★★</span>
-        </div>
+      <div class="hero-image">
+        <img src="./assets/mockup-meetpoint.webp" alt="App Preview" />
       </div>
     </section>
-    <section id="contact">
-      <h3>Compartilhando experiências, de forma simples.</h3>
-      <img src="../public/meetpoint-logo.png" alt="MeetPoint Logo" style="height:40px;">
-      <p>Seja Nosso Convidado.</p>
-      <div class="app-buttons">
-        <a href="#" class="store-btn">App Store</a>
-        <a href="#" class="store-btn">Google Play</a>
+
+    <!-- SECTION -->
+
+    <!-- <section class="sponsors">
+      <p>A nova era do compartilhamento e do networking. Como visto em:</p>
+      <div class="sponsor-logos">
+        <img src="./assets/rockinrio.webp" alt="Rock In Rio" />
+        <img src="./assets/tedtalks.webp" alt="TED" />
+        <img src="./assets/sympla.webp" alt="Sympla" />
+        <img src="./assets/Ticketmaster-Logo.webp" alt="TicketMaster" />
+        <img src="./assets/Airbnb-Logo.webp" alt="Airbnb" />
+        <img src="./assets/Meetup-Logo.webp" alt="Meetup" />
       </div>
-      <p>Email: contato@meetpointapp.com.br</p>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </section> -->
+
+    <!-- SECTION -->
+
+    <div class="avaliation" id="avaliation">
+      <h2>Avaliações dos Usuários</h2>
+
+      <div class="feedbacks">
+        <div class="feedback">
+          <div class="aspas">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+              ></path>
+            </svg>
+          </div>
+          <p>
+            "Este app é essencial para quem quer curtir em São Paulo ou Rio. Não
+            sei como vivi tanto tempo sem ele!"
+          </p>
+          <div class="sc-gZEilz kVEcXi">Isabella Santos</div>
+          <div class="star">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="feedback">
+          <div class="aspas">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+              ></path>
+            </svg>
+          </div>
+          <p class="sc-fMGxnE cvIumV">
+            "Nunca pensei que um app pudesse mudar minha vida social. Agora vou
+            a eventos e conheço pessoas incríveis que nunca teria conhecido
+            antes."
+          </p>
+          <div class="sc-gZEilz kVEcXi">David Silva</div>
+          <div class="star">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="feedback">
+          <div class="aspas">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"
+              ></path>
+            </svg>
+          </div>
+          <p class="sc-fMGxnE cvIumV">
+            "Quem teve a ideia de juntar rede social, eventos e encontros em um
+            só app... Simplesmente brilhante! O MeetPoint revolucionou minha
+            forma de socializar."
+          </p>
+          <div class="sc-gZEilz kVEcXi">Carla Oliveira</div>
+          <div class="star">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
-      <footer>
-        <a href="privacy-policy.html" target="_blank">Política de Privacidade</a> |
-        <a href="terms-of-use.html" target="_blank">Termos e Condições</a>
-        <br>Copyright © 2025 MeetPoint Inc. Todos os direitos reservados.
-      </footer>
-    </section>
-  </div>
-</body>
+    </div>
+
+    <!-- SECTION -->
+
+    <div class="contact" id="contact">
+      <div class="left">
+        <h2 class="sc-hlDTgW bqcBLa">
+          Compartilhando experiências, de forma simples.
+        </h2>
+        <div class="sc-gxyOqs gMmTKQ">
+          <img
+            src="./assets/meetpoint-logo.png"
+            height="40px"
+            width="40px"
+            alt="MeetPoint Logo"
+          />
+          <p class="sc-icsLOd hVWnfK">Seja Nosso Convidado.</p>
+        </div>
+        <div class="downloads-store">
+          <a
+            href="https://apps.apple.com/br/app/meetpoint/id6745105203"
+            target="_blank"
+            class="sc-guGTOK klodAA"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              ></path>
+            </svg>
+            <div><small>Download na</small>App Store</div>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.meetpoint"
+            target="_blank"
+            class="sc-guGTOK klodAA"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
+              ></path>
+            </svg>
+            <div><small>Disponível no</small>Google Play</div></a
+          >
+        </div>
+        <p class="sc-jneOXC gbMZRA">Email: contato@meetpointapp.com.br</p>
+        <div class="social">
+          <!-- <a href="https://www.instagram.com/meetpointapp.com.br/" target="_blank" aria-label="Instagram"
+            ><div class="sc-SmNbY botETR instagram"></div>
+          </a> -->
+          <a
+            href="https://www.linkedin.com/company/meetpointcompany"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><div class="sc-SmNbY botETR linkedin">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                color="#fff"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+                style="color: rgb(255, 255, 255)"
+              >
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/meetpointapp.com.br/"
+            target="_blank"
+            aria-label="Instagram"
+            ><div class="sc-SmNbY botETR instagram">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                color="#fff"
+                height="24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+                style="color: rgb(255, 255, 255)"
+              >
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                ></path>
+              </svg></div
+          ></a>
+        </div>
+        <p class="sc-fmMLgT hOiBTy">
+          Copyright © 2025<br />MeetPoint Inc. Todos os direitos reservados.
+        </p>
+      </div>
+
+      <div class="right">
+        <h2 class="sc-jyynfN liSOMc">Tem alguma dúvida ou feedback?</h2>
+        <p class="sc-ejXKMB fibnbq">Adoraríamos ouvir você!</p>
+        <form
+          action="https://uakawfsoqqiljsymwrdqyp7bty0frhmw.lambda-url.sa-east-1.on.aws/user/feedback"
+          method="POST"
+        >
+          <div class="form-input">
+            <label class="sc-igQrDQ">Nome *</label
+            ><input type="text" required="" class="sc-jLKpbB gvwvOI" value="" />
+          </div>
+          <div class="form-input">
+            <label class="sc-igQrDQ">Sobrenome *</label
+            ><input type="text" required="" class="sc-jLKpbB gvwvOI" value="" />
+          </div>
+          <div class="form-input">
+            <label class="sc-igQrDQ">Email *</label
+            ><input
+              type="email"
+              required=""
+              class="sc-jLKpbB gvwvOI"
+              value=""
+            />
+          </div>
+          <div class="form-input">
+            <label class="sc-igQrDQ">Deixe sua mensagem*</label
+            ><textarea rows="6" class="sc-icgweO hdsMik"></textarea>
+          </div>
+          <button type="submit" class="submit">Enviar</button>
+        </form>
+        <div class="links">
+          <a
+            href="./pages/privacy-policy.html"
+            target="_blank"
+            class="sc-dHSNJi fWmDUi"
+            >Política de Privacidade</a
+          ><a
+            href="./pages/terms-of-use.html"
+            target="_blank"
+            class="sc-dHSNJi fWmDUi"
+            >Termos e Condições</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("menuToggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("menu-open");
+      });
+    </script>
+  </body>
 </html>
